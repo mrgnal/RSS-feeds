@@ -5,14 +5,14 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-RSS_HOST = os.getenv('RSS_HOST')
+RSS_PARSER_HOST = os.getenv('RSS_PARSER_HOST')
 
-FEED_URL = "http://" + RSS_HOST + '/api/feed/'
-BUILDER_URL = "http://" + RSS_HOST + '/api/builder/'
+FEED_URL = "http://" + RSS_PARSER_HOST + '/parser/api/feed/'
+BUILDER_URL = "http://" + RSS_PARSER_HOST + '/parser/api/builder/'
 
 PAYMENT_HOST = os.getenv('PAYMENT_HOST')
 
-LIMITS_URL = "http://" + PAYMENT_HOST + "/api/subscriptions/current/limits"
+LIMITS_URL = "http://" + PAYMENT_HOST + "/payment/api/subscriptions/current/limits"
 
 def create_feed(channel_id, data):
     if data['type'] == 'generator':

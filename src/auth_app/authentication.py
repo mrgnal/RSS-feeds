@@ -7,7 +7,7 @@ import os
 load_dotenv()
 
 USER_AUTH_HOST = os.getenv('USER_AUTH_HOST')
-VERIFY_TOKEN_URL = 'http://'+ USER_AUTH_HOST + '/api/verify_token/'
+VERIFY_TOKEN_URL = 'http://'+ USER_AUTH_HOST + '/auth/api/verify_token/'
 
 class ExternalUser:
     def __init__(self, user_info):
